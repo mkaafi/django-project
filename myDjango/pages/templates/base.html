@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>{% block title %} Django project {% endblock %}</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,7 @@
   </head>
   <body>
     {% block content %}
+    <a href="{% url 'home'%}">Home</a> | <a href="{% url 'about'%}">About</a> | <a href="{% url 'contact'%}">contact</a> 
     {% endblock %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
